@@ -1,9 +1,37 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>color</ion-title>
+  <ion-toolbar color="primary">
+    <ion-title *ngIf="color">{{color.name}}</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
+<div *ngIf="color">
+<ion-list>
+  <io-item>
+    <ion-label>
+      Nombre
+    </ion-label>
+    <ion-label>
+      {{color.name}}
+    </ion-label>
+  </io-item>
+  <io-item>
+    <ion-label>
+      Año
+    </ion-label>
+    <ion-label>
+      {{color.pantone_value}}
+    </ion-label>
+  </io-item>
+  <io-item>
+    <ion-label>
+      Color:
+    </ion-label>
+    <ion-label>
+      <div class="color-sample"[ngStyle]="{'background':color.color}"></div>
+    </ion-label>
+  </io-item>
+</ion-list>
 
+</div>
 </ion-content>
