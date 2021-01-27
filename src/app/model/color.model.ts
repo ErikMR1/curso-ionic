@@ -1,5 +1,3 @@
-import { ColorsService } from "../services/colors.service"
-
 export interface ColorsResponse{
     page: number,
     per_page: number,
@@ -8,7 +6,7 @@ export interface ColorsResponse{
     data:Color[];
 }
 export interface ColorResponse{
-    data:ColorsService;
+    data:Color;
 }
 
 export interface Color{

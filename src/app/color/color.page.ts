@@ -13,7 +13,7 @@ color:Color;
   constructor(private route:ActivatedRoute,private colorsService: ColorsService) {
     this.route.params.subscribe(parameters=>{
       if(parameters.id){
-        console.log("id",parameters.id);
+        console.log("id: ",parameters.id);
         this.colorsService.getSingleColor(parameters.id).subscribe(res=>{
         this.color=res.data;
         console.log(res.data);

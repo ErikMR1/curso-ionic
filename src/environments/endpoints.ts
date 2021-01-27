@@ -1,6 +1,6 @@
 import{environment} from "./environment";
 
-export const Endpoint={
+export const Endpoints={
     login:`${environment.baseUrl}login`,
-    colors:`${environment.baseUrl}unknow`
+    colors:`${environment.baseUrl}unknow`,
 }
